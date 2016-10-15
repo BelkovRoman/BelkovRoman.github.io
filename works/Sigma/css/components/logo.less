@@ -1,0 +1,22 @@
+.logo{
+	float: left;
+	margin-top: 10px;
+}
+
+@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+    .logo{
+		z-index: 5;
+		width: 50%;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: @max-width-lesser){
+   .logo{
+		float: none;
+		display: block;
+		z-index: 5;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
