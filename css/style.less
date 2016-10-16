@@ -12,6 +12,7 @@
 }
 
 /*Размеры для экранов*/
+@min-width-big: 641px;
 @max-width-big: 640px;
 @min-width-lesser: 360px;
 
@@ -30,9 +31,6 @@ body{
 	color: #000;
 	font-size: 16px;
 	font-family: Arial, Helvetica, sans-serif;
-	background: linear-gradient(to bottom, #D1D1D1, #4F0000);
-	background: url(../img/background.jpg) fixed rgba(0,0,0,0);
-	background-size: 100%;
 }
 
 ul{
@@ -59,32 +57,17 @@ a:active{
 	clear: both;
 }
 
-/*Каркас*/
-
-.main-container{
-	position: relative;
-	width: 1100px;
-	margin: 0px auto;
-}
-
 /*Страница*/
 .column_first{
-	width: 680px;
-    height: 860px;
-	float: left;
-	background: url(../img/decor-element-1.png) scroll rgba(0,0,0,0);
 	color: #8F8F8F;
 }
 
 .column_second{
-	width: 30%;
-	float: right;
+	display: none;
 }
 
 .column__inner{
-	width: 70%;
     margin: 0 auto;
-    padding-top: 90px;
 }
 
 .column__header{
@@ -97,7 +80,6 @@ a:active{
 .avatar-container{
 	display: inline-block;
 	width: 120px;
-	margin-right: 40px;
 }
 
 .avatar__image{
@@ -186,7 +168,47 @@ a:active{
 	margin-top: 40px;
 }
 
+@media screen and (min-width: @min-width-big){
+	body{
+		background: url(../img/background.jpg) fixed rgba(0,0,0,0);
+		background-size: 100%;
+	}
+	
+	.main-container{
+		position: relative;
+		width: 1100px;
+		margin: 0px auto;
+	}
+	
+	.column_first{
+		width: 680px;
+		height: 860px;
+		float: left;
+		background: url(../img/decor-element-1.png) scroll rgba(0,0,0,0);
+		color: #8F8F8F;
+	}
+	
+	.column_second{
+		display: block;
+		width: 30%;
+		float: right;
+	}
+	
+	.avatar-container{
+		margin-right: 40px;
+	}
+	
+	.column__inner{
+		width: 70%;
+		padding-top: 90px;
+	}
+}
+
 @media screen and (max-width: @max-width-big) and (min-width: @min-width-lesser){
+	body{
+		background: linear-gradient(to bottom, #D1D1D1, #4F0000);
+	}
+	
 	.main-container{
 		width: 90%;
 		margin: 0px auto;
@@ -199,10 +221,6 @@ a:active{
 		width: 90%;
 		height: auto;
 		border: 2px solid #800000;
-	}
-	
-	.column_second{
-		display: none;
 	}
 	
 	.column__header{
@@ -219,7 +237,6 @@ a:active{
 	
 	.column__inner{
 		width: 90%;
-		margin: 0 auto;
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
