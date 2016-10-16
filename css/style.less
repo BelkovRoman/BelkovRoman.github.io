@@ -13,8 +13,9 @@
 
 /*Размеры для экранов*/
 @min-width-big: 641px;
-@max-width-big: 640px;
-@min-width-lesser: 360px;
+@max-width-normal: 640px;
+@min-width-normal: 361px;
+@max-width-lesser: 360px;
 
 /*Общее*/
 
@@ -204,7 +205,7 @@ a:active{
 	}
 }
 
-@media screen and (max-width: @max-width-big) and (min-width: @min-width-lesser){
+@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
 	body{
 		background: linear-gradient(to bottom, #D1D1D1, #4F0000);
 	}
@@ -233,6 +234,49 @@ a:active{
 	
 	.avatar__name{
 		margin-top: 20px;
+	}
+	
+	.column__inner{
+		width: 90%;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+
+@media screen and (max-width: @max-width-lesser){	
+	body{
+		background: linear-gradient(to bottom, #D1D1D1, #4F0000);
+	}
+	
+	.main-container{
+		width: 90%;
+		margin: 0px auto;
+	}
+	
+	.column_first{
+		float: none;
+		background: linear-gradient(to bottom, #4F0409, #030100);
+		margin: 0 auto;
+		width: 90%;
+		height: auto;
+		border: 2px solid #800000;
+	}
+	
+	.column__header{
+		text-align: center;
+	}
+	
+	.avatar-container{
+		margin-right: 0px;
+	}
+	
+	.avatar__name{
+		margin-top: 20px;
+	}
+	
+	.avatar__label{
+		margin-top: 10px;
+		line-height: 1.2;
 	}
 	
 	.column__inner{
