@@ -1,0 +1,17 @@
+/*Шрифты*/
+@font-face {
+  font-family: 'roboto-regular';
+  src: url('../fonts/roboto-regular.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'roboto-italic';
+  src: url('../fonts/roboto-italic.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'roboto-bold';
+  src: url('../fonts/roboto-bold.ttf');
+  font-style: normal;
+}
+/*Размеры для экранов*/

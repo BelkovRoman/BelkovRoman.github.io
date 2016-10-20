@@ -1,32 +1,3 @@
-/*Шрифты*/
-@font-face{
-  font-family: 'roboto-regular';
-  src: url('../fonts/roboto-regular.ttf');
-  font-style: normal;
-}
-
-@font-face{
-  font-family: 'roboto-italic';
-  src: url('../fonts/roboto-italic.ttf');
-  font-style: normal;
-}
-
-@font-face{
-  font-family: 'roboto-bold';
-  src: url('../fonts/roboto-bold.ttf');
-  font-style: normal;
-}
-
-@notebook: url("../img/notebook.png") no-repeat scroll;
-@author: url("../img/author.png") no-repeat scroll;
-@tag: url("../img/tag.png") no-repeat scroll;
-
-/*Размеры для экранов*/
-@min-width-big: 641px;
-@max-width-normal: 640px;
-@min-width-normal: 361px;
-@max-width-lesser: 360px;
-
 /*Общее*/
 
 *{
@@ -39,376 +10,84 @@ html{
 }
 
 body{
+	min-width: 1210px;
 	color: #000;
 	background-color: #fff;
 	font-size: 16px;
 	font-family: 'roboto-regular', Arial, Helvetica, sans-serif;
 }
 
-ul{
-	list-style: none;
-}
-
-h1,h2,h3{
-	font-family: 'roboto-bold';
-}
-
-a{
-	color: #000000;
-	text-decoration: none;
-	transition: color 0.4s ease-in 0s;
-}
-
-a:hover{
-	color: #0091be;
-} 
-
-a:active{
-	color: #00b4bf;
-} 
-
-.clearfix:after{
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.article{
-	line-height: 2.2;
-}
-
-/*Страница*/
 
 .main-container{
 	width: 1200px;
 	margin: 0px auto;
 }
 
-/*Верхняя панель*/
-.top-panel{
-	padding: 16px 0px;
-	border-bottom: 5px solid #fad027;
-}
-
-.page-name{
-	float: left;
-	margin-right: 20px;
-	font-size: 24px;
-}
-
-.page-name__label{
-	font-size: 16px;
-	margin-top: 5px;
-	color: #0091be;
-}
-
-.navigation{
-	float: right;
-	margin-top: 20px;
-}
-
-.menu{
-	font-size: 16px;
-}
-
-.menu__item{
-	display: inline-block;
-	margin-right: 35px;
+@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+	body, html{
+		min-width: 640px;
+	}
 	
-	&:last-child{
-		margin-right: 0px;
+	.main-container{
+		width: 640px;
+		margin: 0px auto;
 	}
 }
 
-/*Шапка*/
-.header{
-	background-color: #0091be;
-}
-
-.header__inner{
-	padding: 50px 0px;
-	text-align: center;
-}
-
-.logo{
-	display: inline-block;
-	width: 215px;
-	margin-right: 40px;
-}
-
-.img{
-	max-width: 100%;
-    height: auto;
-}
-
-.logo__label{
-	display: inline-block;
-	vertical-align: top;
-    text-align: left;
-	margin-top: 65px;
-    width: 450px;
-	line-height: 1.7;
-	color: #fff;
-	font-size: 46px;
-	font-family: 'roboto-italic';
-}
-
-/*Описание секций*/
-.section{
-	padding: 60px 0px 45px;
-	box-shadow: 0 0 5px #eee;
-}
-
-.section__title{
-	width: 100%;
-	text-align: left;
-	border-bottom: 3px solid #eeeeee;
-	padding-bottom: 20px;
-	font-size: 35px;
-}
-
-
-/*О сайте*/
-.about__title{
-	margin-bottom: 55px;
-}
-
-.article__link{
-	color: #0091be;
-}
-
-.section__article{
-	float: left;
-	width: 45%;
-	margin-top: 10px;
-}
-
-.statistics{
-	float: right;
-	width: 45%;
-}
-
-.statistics__item{
-	margin-bottom: 30px;
+@media screen and (max-width: @max-width-lesser){
+	body, html{
+		min-width: 360px;
+	}
 	
-	&:last-child{
-		margin-bottom: 0px;
+	.main-container{
+		width: 360px;
+		margin: 0px auto;
 	}
 }
 
-.statistics__title{
-	margin-bottom: 10px;
-	font-weight: bold;
-	font-size: 16px;
-}
+/*Страница*/
 
-.skill{
-	width: 100%;
-	background-color: #eeeeee;
-	height: 30px;
-	border-radius: 0px 5px 5px 0px;
-}
+/*Подключаем переменные и миксины(цвета для шрифтов, размеры шрифтов и стили, цвета задних фонов и путь до спрайта)*/
+@import "settings";
 
-.skill__inner{
-	height: 100%;
-	border-radius: 0px 5px 5px 0px;
-}
+/*Подключаем компоненты верстки(корзина, контакты, лого, все меню на сайте, пагинацию, продукты, строку поиска)*/
+@import "components/menu.less";
+@import "components/top-panel.less";
 
-.skill__inner_documentation{
-	width: 89%;
-	background-color: #0091be;
-}
+/*Подключаем секции*/
+@import "sections/about.less";
+@import "sections/blog.less";
+@import "sections/contacts.less";
+@import "sections/projects.less";
 
-.skill__inner_design{
-	width: 85%;
-	background-color: #40c95d;
-}
+/*Подключаем вспомогательный элемент, убирающий последствия от "float"*/
+@import "helpers/clearfix.less";
 
-.skill__inner_mobile{
-	width: 95%;
-	background-color: #d7d93f;
-}
+/*Подключаем основную разметку сайта*/
+@import "layout/footer.less";
+@import "layout/header.less";
+@import "layout/section.less";
 
-/*Проекты*/
-.project{
-	position: relative;
-	display: inline-block;
-	width: 285px;
-	height: 285px;
-	margin-right: 15px;
-	margin-bottom: 20px;
-	
-	&:nth-child(4n){
-		margin-right: 0px
-	}
-	
-	&:nth-last-child(-n+4){
-		margin-bottom: 0px;
-	}
-	
-	&:hover .project__inner{
-		opacity: 1;
-		top: 0px;
-		text-indent: 0px;
-	}
-}
-
-.projects__title{
-	margin-bottom: 45px;
-}
-	
-.project__notebook{
-	background: @notebook;
-}
-	
-.project__inner{
-	position: absolute;
-	display: block;
-	content: "";
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
-	background-color: #0091be;
-	text-align: center;
-	
-	opacity: 0;
-	top: -9999px;
-	text-indent: -9999px;
-	transition: opacity 0.4s ease-in 0.2s;
-}
-
-.project__name{
-    padding-top: 45%;
-	color: #fff;
-}
+/*Подключаем всю типографику*/
+@import "typographics/link.less";
+@import "typographics/title.less";
+@import "typographics/article.less";
+@import "typographics/ul.less";
 
 
-/*Блог*/
-.blog{
-	padding-bottom: 60px;
-	box-shadow: 0 0 5px #eee;
-}
 
-.blog__title{
-	margin-bottom: 40px;
-}
 
-.post{
-	width: 100%;
-	margin-bottom: 50px;
-	
-	&:nth-last-child(-n+2){
-		margin-bottom: 0px;
-	}
-}
 
-.post_tight{
-	vertical-align: top;
-	display: inline-block;
-	width: 48%;
-	margin-right: 40px;
-	
-	&:last-child{
-		margin-right: 0px;
-	}
-}
 
-.post__img{
-	margin-bottom: 30px;
-}
 
-.post__title{
-	margin-bottom: 25px;
-}
 
-.post__inner{
-	margin-bottom: 25px;
-	
-	&:last-child{
-		margin-bottom: 0px;
-	}
-}
 
-.post__date{
-	float: left;
-	width: 10%;
-	text-align: center;
-}
 
-.post__day{
-	background-color: #eeeeee;
-	padding: 15px 0px;
-	
-}
 
-.post__month{
-	background-color: #0091be;
-	padding: 5px 0px;
-	color: #fff;
-}
 
-.post__article{
-	float: right;
-	width: 85%;
-}
 
-.post__author{
-	float: left;
-	font-size: 15px;
-	padding-left: 20px;
-	background: @author;
-	background-position: 2px 3px;
-}
 
-.tags{
-	float: right;
-	font-size: 15px;
-}
 
-.tags__name{
-	margin-right: 10px;
-	padding-left: 20px;
-	background: @tag;
-	background-position: 2px 3px;
-	color: #000;
-}
 
-.tag{
-	margin-right: 5px;
-	padding: 5px 15px;
-	background-color: #0091be;
-	color: #fff;
-	transition: background-color 0.4s ease-in 0.2s;
-	
-	&:last-child{
-		margin-right: 0px;
-	}
-	
-	&:hover{
-		background-color: #00b4ec;
-	}
-}
 
-/*Контакты*/
-.contacts{
-	padding: 0px;
-	box-shadow: none;
-}
 
-/*Футер*/
-.footer{
-	padding: 35px 0px;
-	background-color: #3c3838;
-	font-size: 14px;
-}
-
-.copyright{
-	float: left;
-	color: #fff;
-}
-
-.developer{
-	float: right;
-	color: #fff;
-}

@@ -1,0 +1,92 @@
+/*О сайте*/
+.about__title{
+	margin-bottom: 55px;
+}
+
+.article__link{
+	color: #0091be;
+}
+
+.section__article{
+	float: left;
+	width: 45%;
+	margin-top: 10px;
+}
+
+.statistics{
+	float: right;
+	width: 45%;
+}
+
+.statistics__item{
+	margin-bottom: 30px;
+	
+	&:last-child{
+		margin-bottom: 0px;
+	}
+}
+
+.statistics__title{
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.skill{
+	width: 100%;
+	background-color: #eeeeee;
+	height: 30px;
+	border-radius: 0px 5px 5px 0px;
+}
+
+.skill__inner{
+	height: 100%;
+	border-radius: 0px 5px 5px 0px;
+}
+
+.skill__inner_documentation{
+	width: 89%;
+	background-color: #0091be;
+}
+
+.skill__inner_design{
+	width: 85%;
+	background-color: #40c95d;
+}
+
+.skill__inner_mobile{
+	width: 95%;
+	background-color: #d7d93f;
+}
+
+@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+	.section__article{
+		display: block;
+		float: none;
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	.statistics{
+		display: block;
+		float: none;
+		width: 95%;
+		margin: 20px auto 0px auto;
+	}
+}
+
+@media screen and (max-width: @max-width-lesser){
+	.section__article{
+		display: block;
+		float: none;
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	.statistics{
+		display: block;
+		float: none;
+		width: 95%;
+		margin: 20px auto 0px auto;
+	}
+}

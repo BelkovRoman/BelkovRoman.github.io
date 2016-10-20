@@ -1,0 +1,167 @@
+/*Блог*/
+.blog{
+	padding-bottom: 60px;
+	box-shadow: 0 0 5px #eee;
+}
+
+.blog__title{
+	margin-bottom: 40px;
+}
+
+.post{
+	width: 100%;
+	margin-bottom: 50px;
+	
+	&:nth-last-child(-n+2){
+		margin-bottom: 0px;
+	}
+}
+
+.post_tight{
+	vertical-align: top;
+	display: inline-block;
+	width: 48%;
+	margin-right: 40px;
+	
+	&:last-child{
+		margin-right: 0px;
+	}
+}
+
+.post__img{
+	margin-bottom: 30px;
+}
+
+.post__title{
+	margin-bottom: 25px;
+}
+
+.post__inner{
+	margin-bottom: 25px;
+	
+	&:last-child{
+		margin-bottom: 0px;
+	}
+}
+
+.post__date{
+	float: left;
+	width: 10%;
+	text-align: center;
+}
+
+.post__day{
+	background-color: #eeeeee;
+	padding: 15px 0px;
+	
+}
+
+.post__month{
+	background-color: #0091be;
+	padding: 5px 0px;
+	color: #fff;
+}
+
+.post__article{
+	float: right;
+	width: 85%;
+}
+
+.post__author{
+	float: left;
+	font-size: 15px;
+	padding-left: 20px;
+	background: @author;
+	background-position: 2px 3px;
+}
+
+.tags{
+	float: right;
+	font-size: 15px;
+}
+
+.tags__name{
+	margin-right: 10px;
+	padding-left: 20px;
+	background: @tag;
+	background-position: 2px 3px;
+	color: #000;
+}
+
+.tag{
+	margin-right: 5px;
+	padding: 5px 15px;
+	background-color: #0091be;
+	color: #fff;
+	transition: background-color 0.4s ease-in 0.2s;
+	
+	&:last-child{
+		margin-right: 0px;
+	}
+	
+	&:hover{
+		background-color: #00b4ec;
+	}
+}
+
+@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+	.post{
+		margin-bottom: 50px;
+		
+		&:nth-last-child(-n+2){
+			margin-bottom: 50px;
+		}
+		
+		&:last-child{
+			margin-bottom: 0px;
+		}
+	}
+	
+	.post__title{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.post__inner{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.post_tight{
+		width: 100%;
+		margin-right: 0px;
+	}
+}
+
+@media screen and (max-width: @max-width-lesser){
+	.post{
+		margin-bottom: 50px;
+		
+		&:nth-last-child(-n+2){
+			margin-bottom: 50px;
+		}
+		
+		&:last-child{
+			margin-bottom: 0px;
+		}
+	}
+	
+	.post__title{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.post__inner{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.post_tight{
+		width: 100%;
+		margin-right: 0px;
+	}
+	
+	.tags{
+		display: none;
+	}
+}

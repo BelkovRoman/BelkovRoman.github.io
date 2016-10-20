@@ -1,0 +1,41 @@
+/*Футер*/
+.footer{
+	min-width: 1210px;
+	padding: 35px 0px;
+	background-color: #3c3838;
+	font-size: 14px;
+}
+
+.copyright{
+	float: left;
+	color: #fff;
+    margin-left: 10px;
+}
+
+.developer{
+	float: right;
+	color: #fff;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+	.footer{
+		min-width: 640px;
+	}
+}
+
+@media screen and (max-width: @max-width-lesser){
+	.footer{
+		min-width: 360px;
+	}
+	
+	.copyright{
+		display: none;
+	}
+	
+	.developer{
+		float: none;
+		display: block;
+		text-align: center;
+	}
+}

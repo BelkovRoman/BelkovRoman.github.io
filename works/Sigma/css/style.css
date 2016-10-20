@@ -224,17 +224,29 @@ img {
   margin-top: 10px;
 }
 @media screen and (max-width: 640px) and (min-width: 361px) {
+  .logo-img {
+    display: none;
+  }
   .logo {
+    float: left;
+    display: block;
     z-index: 5;
-    width: 50%;
+    width: 262px;
+    height: 66px;
+    background: url(../img/decor/logo_small.png) scroll rgba(0, 0, 0, 0);
   }
 }
 @media screen and (max-width: 360px) {
+  .logo-img {
+    display: none;
+  }
   .logo {
     float: none;
     display: block;
+    width: 262px;
+    height: 66px;
+    background: url(../img/decor/logo_small.png) scroll rgba(0, 0, 0, 0);
     z-index: 5;
-    width: 90%;
     margin: 0 auto 20px;
   }
 }
@@ -286,7 +298,8 @@ img {
   font-size: 1.8rem;
 }
 .pagination__link:hover {
-  color: #0056db;
+  color: #000;
+  text-decoration: underline;
 }
 .pagination__link_active {
   color: #005ff1;
@@ -301,7 +314,7 @@ img {
 }
 @media screen and (max-width: 360px) {
   .pagination__item {
-    width: 10%;
+    width: 6%;
     margin-right: 5%;
   }
   .pagination__item_hidden {
@@ -329,6 +342,21 @@ img {
   bottom: 0px;
   width: 80px;
   height: 80px;
+}
+.special-offer__lable {
+  position: absolute;
+  line-height: 1.5;
+  font-size: 13px;
+  font-weight: 600;
+}
+.special-offer__lable-best-seller {
+  bottom: 22px;
+  width: 50px;
+  color: #fff;
+  line-height: 1.5;
+}
+.special-offer__lable-offer {
+  bottom: 31px;
 }
 .product__name {
   text-align: left;
@@ -362,6 +390,12 @@ img {
   .product:nth-last-child(-n+3) {
     margin-bottom: 0;
   }
+  .special-offer__lable-offer {
+    left: 116px;
+  }
+  .special-offer__lable-best-seller {
+    left: 111px;
+  }
 }
 @media screen and (max-width: 640px) and (min-width: 361px) {
   .product {
@@ -382,11 +416,20 @@ img {
     font-size: 1.8rem;
     margin-top: 10px;
   }
+  .product__name {
+    line-height: 1.5;
+  }
+  .special-offer__lable-offer {
+    left: 60%;
+  }
+  .special-offer__lable-best-seller {
+    left: 58%;
+  }
 }
 @media screen and (max-width: 360px) {
   .product {
-    width: 100%;
-    margin-bottom: 30px;
+    width: 95%;
+    margin: 0 auto 30px auto;
   }
   .product:last-child {
     margin-bottom: 0px;
@@ -408,6 +451,15 @@ img {
   }
   .product__add-to-basket:active {
     opacity: 0.7;
+  }
+  .product__name {
+    line-height: 1.5;
+  }
+  .special-offer__lable-offer {
+    left: 56%;
+  }
+  .special-offer__lable-best-seller {
+    left: 55%;
   }
 }
 .side-panel {
@@ -493,8 +545,76 @@ img {
 .search__button:active {
   opacity: 1;
 }
-.drop-menu {
+.hamburger {
+  float: left;
   display: none;
+}
+.hamburger__trigger {
+  position: absolute;
+  z-index: 25;
+  display: inline-block;
+  width: 35px;
+  height: 6px;
+  border-top: 13px double #000;
+  border-bottom: 4px solid #000;
+  text-indent: -9999px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+.hamburger__toggle {
+  display: none;
+}
+.hamburger__toggle:checked ~ .hamburger__trigger {
+  border-top-color: #ff9600;
+  border-bottom-color: #ff9600;
+}
+.hamburger__toggle:checked ~ .hamburger__target {
+  position: fixed;
+  overflow: hidden;
+  clip: auto;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  top: 0px;
+  left: 0px;
+}
+.hamburger__toggle:checked ~ .hamburger__trigger {
+  position: fixed;
+}
+.hamburger__target {
+  z-index: 20;
+  border: 0;
+  background-color: #000;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  opacity: 0;
+  transition: 0.5s opacity;
+  text-align: center;
+  list-style: none;
+}
+.hamburger__item:first-child {
+  margin-top: 50px;
+}
+.hamburger__link {
+  opacity: 1;
+  font-size: 2.2rem;
+  text-indent: 0px;
+  color: #fff;
+  padding: 10px;
+  display: block;
+  transition: 0.5s all;
+  padding: 8% 0px;
+}
+.hamburger__link:hover {
+  color: #000;
+  background: #fff;
 }
 @media screen and (min-width: 641px) {
   .search__button {
@@ -527,56 +647,7 @@ img {
     margin-bottom: 20px;
   }
   .hamburger {
-    position: relative;
     display: inline-block;
-    width: 35px;
-    height: 6px;
-    border-top: 13px double #000;
-    border-bottom: 4px solid #000;
-    text-indent: -9999px;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-top: 15px;
-  }
-  .hamburger:hover {
-    border-top-color: #ff9600;
-    border-bottom-color: #ff9600;
-  }
-  .hamburger:hover .drop__list {
-    opacity: 1;
-    top: -35px;
-    left: -5px;
-  }
-  .drop-menu {
-    display: inline-block;
-  }
-  .drop__list {
-    text-align: center;
-    z-index: 15;
-    position: absolute;
-    left: 0px;
-    width: 120px;
-    opacity: 0;
-    top: -9999em;
-    transition: top 0.4s ease-in 0.2s;
-  }
-  .drop__item {
-    margin-left: 0px;
-  }
-  .drop__link {
-    font-size: 1.5rem;
-    text-indent: 0px;
-    background: #3d3d3d;
-    color: #fff;
-    padding: 10px;
-    display: block;
-    border-bottom: 1px solid #666;
-    transition: 0.5s all;
-  }
-  .drop__link:hover {
-    color: #ff9600;
-    background: #666;
-    padding: 10px 0 10px 20px;
   }
   .top-panel__menu {
     display: none;
@@ -620,60 +691,8 @@ img {
   .top-panel {
     margin-bottom: 20px;
   }
-  .top-panel {
-    margin-bottom: 20px;
-  }
   .hamburger {
-    position: relative;
     display: inline-block;
-    width: 35px;
-    height: 6px;
-    border-top: 13px double #000;
-    border-bottom: 4px solid #000;
-    text-indent: -9999px;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-top: 15px;
-  }
-  .hamburger:hover {
-    border-top-color: #ff9600;
-    border-bottom-color: #ff9600;
-  }
-  .hamburger:hover .drop__list {
-    opacity: 1;
-    top: -35px;
-    left: -5px;
-  }
-  .drop-menu {
-    display: inline-block;
-  }
-  .drop__list {
-    text-align: center;
-    z-index: 15;
-    position: absolute;
-    left: 0px;
-    width: 120px;
-    opacity: 0;
-    top: -9999em;
-    transition: top 0.4s ease-in 0.2s;
-  }
-  .drop__item {
-    margin-left: 0px;
-  }
-  .drop__link {
-    font-size: 1.5rem;
-    text-indent: 0px;
-    background: #3d3d3d;
-    color: #fff;
-    padding: 10px;
-    display: block;
-    border-bottom: 1px solid #666;
-    transition: 0.5s all;
-  }
-  .drop__link:hover {
-    color: #ff9600;
-    background: #666;
-    padding: 10px 0 10px 20px;
   }
   .top-panel__menu {
     display: none;
@@ -925,7 +944,7 @@ img {
     width: 100%;
   }
   .content {
-    margin-bottom: 100px;
+    margin-bottom: 0px;
   }
   .content__products {
     float: none;
@@ -935,7 +954,7 @@ img {
     padding-left: 0px;
   }
   .page {
-    padding-bottom: 30px;
+    padding-bottom: 130px;
   }
 }
 @media screen and (max-width: 360px) {
@@ -943,7 +962,7 @@ img {
     width: 100%;
   }
   .content {
-    margin-bottom: 100px;
+    margin-bottom: 0px;
   }
   .content__products {
     float: none;
@@ -951,6 +970,9 @@ img {
     margin: 0px auto;
     padding-right: 0px;
     padding-left: 0px;
+  }
+  .page {
+    padding-bottom: 130px;
   }
 }
 /*Подключаем всю типографику(для ссылок, заголовков, общие стили и иконки)*/
