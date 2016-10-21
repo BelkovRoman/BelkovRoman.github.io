@@ -7,7 +7,6 @@ html {
   min-height: 100%;
 }
 body {
-  min-width: 1210px;
   color: #000;
   background-color: #fff;
   font-size: 16px;
@@ -18,23 +17,13 @@ body {
   margin: 0px auto;
 }
 @media screen and (max-width: 640px) and (min-width: 361px) {
-  body,
-  html {
-    min-width: 640px;
-  }
   .main-container {
-    width: 640px;
-    margin: 0px auto;
+    width: 620px;
   }
 }
 @media screen and (max-width: 360px) {
-  body,
-  html {
-    min-width: 360px;
-  }
   .main-container {
-    width: 360px;
-    margin: 0px auto;
+    width: 340px;
   }
 }
 /*Страница*/
@@ -103,8 +92,6 @@ body {
   border-top: 13px double #000;
   border-bottom: 4px solid #000;
   text-indent: -9999px;
-  cursor: pointer;
-  margin-left: 10px;
   margin-top: 15px;
 }
 .hamburger__toggle {
@@ -163,7 +150,7 @@ body {
 }
 @media screen and (max-width: 640px) and (min-width: 361px) {
   .top-panel {
-    min-width: 640px;
+    min-width: 620px;
   }
   .navigation {
     display: none;
@@ -174,7 +161,7 @@ body {
 }
 @media screen and (max-width: 360px) {
   .top-panel {
-    min-width: 360px;
+    min-width: 340px;
   }
   .navigation {
     display: none;
@@ -508,12 +495,12 @@ body {
 }
 @media screen and (max-width: 640px) and (min-width: 361px) {
   .footer {
-    min-width: 640px;
+    min-width: 620px;
   }
 }
 @media screen and (max-width: 360px) {
   .footer {
-    min-width: 360px;
+    min-width: 340px;
   }
   .copyright {
     display: none;
@@ -555,7 +542,7 @@ body {
 }
 @media screen and (max-width: 640px) and (min-width: 361px) {
   .header {
-    min-width: 640px;
+    min-width: 620px;
   }
   .logo {
     margin-right: 0px;
@@ -563,7 +550,7 @@ body {
 }
 @media screen and (max-width: 360px) {
   .header {
-    min-width: 360px;
+    min-width: 340px;
   }
   .logo__label {
     display: none;
@@ -595,22 +582,24 @@ body {
 }
 @media screen and (max-width: 640px) and (min-width: 361px) {
   .section__title {
+    width: auto;
     margin-left: 10px;
   }
   .section {
     padding-left: 0px;
     padding-right: 0px;
-    min-width: 640px;
+    min-width: 620px;
   }
 }
 @media screen and (max-width: 360px) {
   .section__title {
+    width: auto;
     margin-left: 10px;
   }
   .section {
     padding-left: 0px;
     padding-right: 0px;
-    min-width: 360px;
+    min-width: 340px;
   }
 }
 /*Подключаем всю типографику*/
