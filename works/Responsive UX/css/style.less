@@ -22,15 +22,22 @@ body{
 	margin: 0px auto;
 }
 
+@media screen and (min-width: @min-width-big){
+	.main-container{
+		min-width: 641px;
+	}
+}
+
 @media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
 	.main-container{
-		width: 620px;
+		max-width: 640px;
+		min-width: 361px;
 	}
 }
 
 @media screen and (max-width: @max-width-lesser){
 	.main-container{
-		width: 340px;
+		max-width: 360px;
 	}
 }
 

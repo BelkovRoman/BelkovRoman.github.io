@@ -1,6 +1,5 @@
 /*Верхняя панель*/
 .top-panel{
-	min-width: 1210px;
 	padding: 16px 0px;
 	border-bottom: 5px solid #fad027;
 }
@@ -104,9 +103,16 @@
 	}
 }
 
+@media screen and (min-width: @min-width-big){
+	.top-panel{
+		min-width: 1210px;
+	}
+}
+
 @media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
 	.top-panel{
-		min-width: 620px;
+		max-width: 640px;
+		min-width: 361px;
 	}
 	
 	.navigation{
@@ -120,7 +126,7 @@
 
 @media screen and (max-width: @max-width-lesser){
 	.top-panel{
-		min-width: 340px;
+		max-width: 360px;
 	}
 	
 	.navigation{

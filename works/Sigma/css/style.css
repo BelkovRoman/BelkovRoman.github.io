@@ -302,7 +302,7 @@ img {
   text-decoration: underline;
 }
 .pagination__link_active {
-  color: #005ff1;
+  color: #ffc500;
 }
 @media screen and (max-width: 640px) and (min-width: 361px) {
   .pagination__item {
@@ -346,7 +346,7 @@ img {
 .special-offer__lable {
   position: absolute;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
 }
 .special-offer__lable-best-seller {
@@ -414,7 +414,6 @@ img {
   }
   .product__price {
     font-size: 1.8rem;
-    margin-top: 10px;
   }
   .product__name {
     line-height: 1.5;
@@ -439,7 +438,6 @@ img {
   }
   .product__price {
     font-size: 2.2rem;
-    margin-top: 10px;
   }
   .product__add-to-basket {
     margin-right: 10px;
@@ -561,16 +559,39 @@ img {
   cursor: pointer;
   margin-left: 10px;
   margin-top: 15px;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+.hamburger__trigger:after {
+  display: none;
 }
 .hamburger__toggle {
   display: none;
 }
 .hamburger__toggle:checked ~ .hamburger__trigger {
-  border-top-color: #ff9600;
-  border-bottom-color: #ff9600;
+  border-bottom: none;
+  border-top: 4px solid #ff9600;
+  -webkit-transform: rotate(-225deg);
+      -ms-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+}
+.hamburger__toggle:checked ~ .hamburger__trigger:after {
+  position: absolute;
+  left: -3px;
+  top: -7px;
+  content: '';
+  z-index: 25;
+  display: inline-block;
+  width: 35px;
+  height: 6px;
+  border-bottom: 4px solid #ff9600;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(-85deg);
 }
 .hamburger__toggle:checked ~ .hamburger__target {
-  position: fixed;
+  position: absolute;
   overflow: hidden;
   clip: auto;
   margin: auto;
@@ -581,7 +602,7 @@ img {
   left: 0px;
 }
 .hamburger__toggle:checked ~ .hamburger__trigger {
-  position: fixed;
+  position: absolute;
 }
 .hamburger__target {
   z-index: 20;
@@ -600,7 +621,7 @@ img {
   list-style: none;
 }
 .hamburger__item:first-child {
-  margin-top: 50px;
+  margin-top: 75px;
 }
 .hamburger__link {
   opacity: 1;
@@ -610,7 +631,7 @@ img {
   padding: 10px;
   display: block;
   transition: 0.5s all;
-  padding: 8% 0px;
+  padding: 5% 0px;
 }
 .hamburger__link:hover {
   color: #000;
@@ -764,7 +785,7 @@ img {
   }
   .copyright {
     float: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .source {
     display: none;
@@ -954,7 +975,7 @@ img {
     padding-left: 0px;
   }
   .page {
-    padding-bottom: 130px;
+    padding-bottom: 98px;
   }
 }
 @media screen and (max-width: 360px) {
@@ -972,7 +993,7 @@ img {
     padding-left: 0px;
   }
   .page {
-    padding-bottom: 130px;
+    padding-bottom: 98px;
   }
 }
 /*Подключаем всю типографику(для ссылок, заголовков, общие стили и иконки)*/

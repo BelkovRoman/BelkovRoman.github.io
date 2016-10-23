@@ -61,18 +61,39 @@
 	cursor: pointer;
 	margin-left: 10px;
 	margin-top: 15px;
+	transition: transform 0.4s;
 }
+ 
+ .hamburger__trigger:after {
+	 display: none;
+ }
  
 .hamburger__toggle {
 	display: none;
 	
 	&:checked ~ .hamburger__trigger {
-		border-top-color: #ff9600;
-		border-bottom-color: #ff9600;
+		border-bottom: none;
+		border-top: 4px solid #ff9600;
+		transform: rotate(-225deg);
+	}
+	
+	&:checked ~ .hamburger__trigger:after {
+		position: absolute;
+		left: -3px;
+		top: -7px;
+		content: '';
+		z-index: 25;
+		display: inline-block;
+		width: 35px;
+		height: 6px;
+		border-bottom: 4px solid #ff9600;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(-85deg);
 	}
 	
 	&:checked ~ .hamburger__target {
-		position: fixed;
+		position: absolute;
 		overflow: hidden;
 		clip: auto;
 		margin: auto;
@@ -84,7 +105,7 @@
 	}
 	
 	&:checked ~ .hamburger__trigger {
-		position: fixed;
+		position: absolute;
 	}
 }
 
@@ -106,7 +127,7 @@
 }
 
 .hamburger__item:first-child{
-	margin-top: 50px;
+	margin-top: 75px;
 } 
 
 .hamburger__link{
@@ -117,7 +138,7 @@
 	padding: 10px;
 	display: block;
 	transition: 0.5s all;
-	padding: 8% 0px;
+	padding: 5% 0px;
 	
 	&:hover{
 		color: #000;
