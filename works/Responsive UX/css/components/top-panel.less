@@ -2,6 +2,7 @@
 .top-panel{
 	padding: 16px 0px;
 	border-bottom: 5px solid #fad027;
+	z-index: 10;
 }
 
 .page-name{
@@ -35,34 +36,57 @@
 	display: inline-block;
 	width: 35px;
 	height: 6px;
-	border-top: 13px double #000;
-	border-bottom: 4px solid #000;
+	border-top: 13px double #fff;
+	border-bottom: 4px solid #fff;
 	text-indent: -9999px;
+	cursor: pointer;
+	margin-left: 10px;
 	margin-top: 15px;
+	transition: transform 0.4s;
 }
+ 
+ .hamburger__trigger:after {
+	 display: none;
+ }
  
 .hamburger__toggle {
 	display: none;
 	
 	&:checked ~ .hamburger__trigger {
-		border-top-color: #0091be;
-		border-bottom-color: #0091be;
+		border-bottom: none;
+		border-top: 4px solid #0091be;
+		transform: rotate(-225deg);
+	}
+	
+	&:checked ~ .hamburger__trigger:after {
+		position: absolute;
+		left: -3px;
+		top: -7px;
+		content: '';
+		z-index: 25;
+		display: inline-block;
+		width: 35px;
+		height: 6px;
+		border-bottom: 4px solid #0091be;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(-85deg);
 	}
 	
 	&:checked ~ .hamburger__target {
-		position: fixed;
+		position: absolute;
 		overflow: hidden;
 		clip: auto;
 		margin: auto;
 		width: 100%;
-		height: 100%;
+		height: 100vh;
 		opacity: 0.85;
 		top: 0px;
 		left: 0px;
 	}
 	
 	&:checked ~ .hamburger__trigger {
-		position: fixed;
+		position: absolute;
 	}
 }
 
@@ -84,18 +108,18 @@
 }
 
 .hamburger__item:first-child{
-	margin-top: 90px;
+	margin-top: 75px;
 } 
 
 .hamburger__link{
 	opacity: 1;
-	font-size: 22px;
+	font-size: 20px;
 	text-indent: 0px;
 	color: #fff;
 	padding: 10px;
 	display: block;
 	transition: 0.5s all;
-	padding: 8% 0px;
+	padding: 5% 0px;
 	
 	&:hover{
 		color: #000;
@@ -103,30 +127,17 @@
 	}
 }
 
-@media screen and (min-width: @min-width-big){
+@media screen and (max-width: @max-width-normal) and (min-width: @max-width-lesser){
 	.top-panel{
-		min-width: 1210px;
-	}
-}
-
-@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
-	.top-panel{
-		max-width: 640px;
-		min-width: 361px;
+		position: fixed;
+		width: 100%;
+		background-color: #3c3838;
+		top: 0px;
+		left: 0px;
 	}
 	
-	.navigation{
-		display: none;
-	}
-	
-	.hamburger{
-		display: inline-block;
-	}
-}
-
-@media screen and (max-width: @max-width-lesser){
-	.top-panel{
-		max-width: 360px;
+	.page-name{
+		color: #fff;
 	}
 	
 	.navigation{

@@ -1,8 +1,4 @@
 /*О сайте*/
-.about__title{
-	margin-bottom: 55px;
-}
-
 .article__link{
 	color: #0091be;
 }
@@ -29,7 +25,7 @@
 .statistics__title{
 	margin-bottom: 10px;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .skill{
@@ -59,7 +55,11 @@
 	background-color: #d7d93f;
 }
 
-@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+@media screen and (max-width: @max-width-normal) and (min-width: @max-width-lesser){
+	.skill{
+		height: 20px;
+	}
+	
 	.section__article{
 		display: block;
 		float: none;
@@ -71,22 +71,6 @@
 		display: block;
 		float: none;
 		width: 95%;
-		margin: 20px auto 0px auto;
-	}
-}
-
-@media screen and (max-width: @max-width-lesser){
-	.section__article{
-		display: block;
-		float: none;
-		width: 95%;
-		margin: 0 auto;
-	}
-
-	.statistics{
-		display: block;
-		float: none;
-		width: 95%;
-		margin: 20px auto 0px auto;
+		margin: 40px auto 0px auto;
 	}
 }
