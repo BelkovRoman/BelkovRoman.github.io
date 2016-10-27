@@ -36,8 +36,8 @@
 	display: inline-block;
 	width: 35px;
 	height: 6px;
-	border-top: 13px double #fff;
-	border-bottom: 4px solid #fff;
+	border-top: 13px double #0091be;
+	border-bottom: 4px solid #0091be;
 	text-indent: -9999px;
 	cursor: pointer;
 	margin-left: 10px;
@@ -46,7 +46,7 @@
 }
  
  .hamburger__trigger:after {
-	 display: none;
+	display: none;
  }
  
 .hamburger__toggle {
@@ -54,7 +54,7 @@
 	
 	&:checked ~ .hamburger__trigger {
 		border-bottom: none;
-		border-top: 4px solid #0091be;
+		border-top: 4px solid #fff;
 		transform: rotate(-225deg);
 	}
 	
@@ -67,7 +67,7 @@
 		display: inline-block;
 		width: 35px;
 		height: 6px;
-		border-bottom: 4px solid #0091be;
+		border-bottom: 4px solid #fff;
 		-webkit-transform: rotate(45deg);
 		-ms-transform: rotate(45deg);
 		transform: rotate(-85deg);
@@ -131,13 +131,9 @@
 	.top-panel{
 		position: fixed;
 		width: 100%;
-		background-color: #3c3838;
+		background-color: #fff;
 		top: 0px;
 		left: 0px;
-	}
-	
-	.page-name{
-		color: #fff;
 	}
 	
 	.navigation{

@@ -3,6 +3,18 @@
 	position: relative;
 	display: inline-block;
 	z-index: 1;
+	width: 300px;
+	height: 300px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	
+	&:nth-child(4n){
+		margin-right: 0px;
+	}
+	
+	&:nth-last-child(-n+4){
+		margin-bottom: 0px;
+	}
 	
 	&:hover .project__inner{
 		opacity: 1;
@@ -10,7 +22,7 @@
 		text-indent: 0px;
 	}
 }
-	
+
 .project__notebook{
 	background: url("../img/notebook.png");
 	background-size: cover;
@@ -38,29 +50,39 @@
 	color: #fff;
 }
 
-@media screen and (min-width: 641px){
+@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+	.projects{
+		width: 100%;
+		text-align: center;
+	}
+	
 	.project{
-		width: 285px;
-		height: 285px;
-		margin-right: 15px;
-		margin-bottom: 20px;
-		
-		&:nth-child(4n){
+		width: 165px;
+		height: 165px;
+		margin-right: 6%;
+		margin-bottom: 6%;
+	
+		&:nth-child(2n){
 			margin-right: 0px;
 		}
 		
-		&:nth-last-child(-n+4){
+		&:nth-last-child(-n+2){
 			margin-bottom: 0px;
 		}
 	}
 }
 
-@media screen and (min-width: @max-width-lesser) and (max-width: @max-width-normal){
+@media screen and (max-width: @max-width-lesser){
+	.projects{
+		width: 100%;
+		text-align: center;
+	}
+	
 	.project{
-		width: 45%;
-		height: 285px;
-		margin-right: 15px;
-		margin-bottom: 20px;
+		width: 125px;
+		height: 125px;
+		margin-right: 5px;
+		margin-bottom: 5px;
 	
 		&:nth-child(2n){
 			margin-right: 0px;
