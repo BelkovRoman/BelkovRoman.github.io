@@ -129,6 +129,10 @@
 
 @media screen and (max-width: @max-width-normal) and (min-width: @max-width-lesser){
 	.top-panel{
+		padding: 10px 0px;
+	}
+	
+	.top-panel{
 		position: fixed;
 		width: 100%;
 		background-color: #fff;
@@ -142,5 +146,31 @@
 	
 	.hamburger{
 		display: inline-block;
+	}
+	
+	.page-name{
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: @max-width-lesser){
+	.top-panel{
+		position: fixed;
+		width: 100%;
+		background-color: #fff;
+		top: 0px;
+		left: 0px;
+	}
+	
+	.hamburger{
+		display: inline-block;
+	}
+	
+	.navigation{
+		display: none;
+	}
+	
+	.page-name{
+		font-size: 20px;
 	}
 }
