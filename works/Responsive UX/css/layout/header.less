@@ -20,7 +20,7 @@
 }
 
 .logo__label{
-	display: none;
+	display: inline-block;
 	vertical-align: top;
     text-align: left;
 	margin-top: 65px;
@@ -31,19 +31,16 @@
 	font-family: 'roboto-italic';
 }
 
-@media screen and (min-width: @min-width-big){	
-	.logo__label{
-		display: inline-block;
-	}
-}
-
 @media screen and (max-width: @max-width-normal) and (min-width: @max-width-lesser){
 	.logo{
 		margin-right: 0px;
 	}
 	
 	.logo__label{
-		display: none;
+		display: block;
+		width: auto;
+		text-align: center;
+		font-size: 30px;
 	}
 }
 
@@ -53,6 +50,9 @@
 	}
 	
 	.logo__label{
-		display: none;
+		display: block;
+		width: auto;
+		text-align: center;
+		font-size: 24px;
 	}
 }

@@ -7,6 +7,7 @@
 
 html{
 	min-height: 100%;
+	z-index: 10;
 }
 
 body{
@@ -16,6 +17,10 @@ body{
 	font-family: 'roboto-regular', Arial, Helvetica, sans-serif;
 }
 
+img{
+	max-width: 100%;
+    height: auto;
+}
 
 .main-container{
 	margin: 0px auto;
@@ -24,17 +29,20 @@ body{
 @media screen and (min-width: @min-width-big){
 	.main-container{
 		min-width: 641px;
+		max-width: 1000px;
 	}
 }
 
 @media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
 	.main-container{
 		max-width: 640px;
-		min-width: 361px;
 	}
     
     .page{
-        margin-top: 75px;
+		z-index: 10;
+        animation: transforming1 4s infinite cubic-bezier(1,0,0,.5);
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
     }
 }
 
@@ -44,18 +52,42 @@ body{
 	}
     
     .page{
-        margin-top: 75px;
+		z-index: 10;
+        animation: transforming2 4s infinite cubic-bezier(1,0,0,.5);
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+    }
+}
+
+@keyframes transforming1{
+    0%{
+		margin-top: 0px;
+    }
+    
+    100%{
+        margin-top: 100px;
+    }
+}
+
+@keyframes transforming2{
+    0%{
+		margin-top: 0px;
+    }
+    
+    100%{
+        margin-top: 55px;
     }
 }
 
 /*Страница*/
 
-/*Подключаем переменные и миксины(цвета для шрифтов, размеры шрифтов и стили, цвета задних фонов и путь до спрайта)*/
+/*Подключаем переменные и миксины*/
 @import "settings";
 
-/*Подключаем компоненты верстки(корзина, контакты, лого, все меню на сайте, пагинацию, продукты, строку поиска)*/
+/*Подключаем компоненты верстки*/
 @import "components/menu.less";
 @import "components/top-panel.less";
+@import "components/preloader.less";
 
 /*Подключаем секции*/
 @import "sections/about.less";
