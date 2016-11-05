@@ -1,6 +1,6 @@
-/*Прелоадер*/
+/*preloader*/
 
-.background{
+.preloader-background{
 	position: fixed;
 	background-color: #0091be;
     width: 100%;
@@ -13,7 +13,7 @@
 
 .preloader{
 	margin: 20% auto 0 auto;
-    width: 28%;
+    width: 200px;
 }
 
 .preloader__inner{
@@ -125,24 +125,15 @@
 
 @keyframes transforming{
     10%{
-        top: 40px;
-        left: 45px;
-        width: 100px;
-        height: 100px;
+        transform: scale(1);
     }
     
     50%{
-        top: 65px;
-        left: 70px;
-        width: 50px;
-        height: 50px;
+        transform: scale(0.6);
     }
     
     90%{
-        top: 40px;
-        left: 45px;
-        width: 100px;
-        height: 100px;
+        transform: scale(1);
     }
 }
 
@@ -162,7 +153,7 @@
 
 @keyframes disapearing{
     0%{
-         opacity: 1;
+        opacity: 1;
     }
     
     80%{
@@ -177,8 +168,12 @@
 }
 
 @media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+	.preloader-background{
+		margin-top: -100px;
+	}
+	
 	.preloader{
-		width: 40%;
+		width: 200px;
 	}
 	
 	.preloader__title{
@@ -187,7 +182,11 @@
 }
 
 @media screen and (max-width: @max-width-lesser){
+	.preloader-background{
+		margin-top: -85px;
+	}
+	
 	.preloader{
-		width: 60%;
+		width: 200px;
 	}
 }
