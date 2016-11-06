@@ -1,32 +1,33 @@
 /*Верхняя панель*/
 .top-panel{
-	padding: 16px 0px;
+	z-index: 50;
+	padding: 1.6rem 0;
 	border-bottom: 5px solid #fad027;
 }
 
 .page-name{
 	float: left;
-	margin-left: 10px;
-	font-size: 24px;
+	margin-left: 1rem;
+	font-size: 2.4rem;
 }
 
 .page-name__label{
-	font-size: 16px;
-	margin-top: 5px;
+	font-size: 1.6rem;
+	margin-top: .5rem;
 	color: #0091be;
 }
 
 .navigation{
 	float: right;
-	margin-top: 20px;
-	margin-right: 10px;
+	margin-top: 2rem;
+	margin-right: 1rem;
 }
 
 .hamburger{
 	float: right;
 	display: none;
 	width: 55px;
-    height: 50px;
+    height: 45px;
 }
 
 .hamburger__trigger {
@@ -39,8 +40,8 @@
 	border-bottom: 3px solid #0091be;
 	text-indent: -9999px;
 	cursor: pointer;
-	margin-left: 10px;
-	margin-top: 15px;
+	margin-left: 1rem;
+	margin-top: 1.5rem;
 	transition: transform 0.4s;
 	
 	&:before{
@@ -113,6 +114,10 @@
 	overflow: hidden;
 	padding: 0;
 	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	width: 1px;
 	opacity: 0;
 	transition: 0.5s opacity;
@@ -120,19 +125,19 @@
 	list-style: none;
 }
 
-.hamburger__item:first-child{
-	margin-top: 20%;
-} 
+.hamburger__item{
+	width: 100%;
+}
 
 .hamburger__link{
 	opacity: 1;
-	font-size: 20px;
+	font-size: 2rem;
 	text-indent: 0px;
 	color: #fff;
-	padding: 10px;
 	display: block;
 	transition: 0.5s all;
-	padding: 20px 0px;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 	
 	&:hover{
 		color: #000;
@@ -142,7 +147,8 @@
 
 @media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
 	.top-panel{
-		padding: 10px 0px;
+		padding-top: 1rem;
+		padding-bottom: 0;
 		position: fixed;
 		width: 100%;
 		background-color: #fff;
@@ -150,23 +156,23 @@
 		left: 0px;
 	}
 	
+	.hamburger{
+		display: inline-block;
+	}
+	
 	.navigation{
-		float: none;
-		text-align: center;
-		margin-top: 5px;
-		margin-bottom: 5px;
-		margin-right: 0px;
+		display: none;
 	}
 	
 	.page-name{
-		display: block;
-		float: none;
-		font-size: 20px;
+		font-size: 2rem;
 	}
 }
 
 @media screen and (max-width: @max-width-lesser){
 	.top-panel{
+		padding-top: 1rem;
+		padding-bottom: 0;
 		z-index: 10;
 		position: fixed;
 		width: 100%;
@@ -184,6 +190,6 @@
 	}
 	
 	.page-name{
-		font-size: 20px;
+		font-size: 2rem;
 	}
 }
