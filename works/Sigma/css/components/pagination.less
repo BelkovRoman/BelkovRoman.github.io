@@ -5,7 +5,7 @@
 .pagination__item{
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: 15px;
+	margin-right: 0.5rem;
 	
 	&:last-child{
 		margin-right: 0px;
@@ -45,7 +45,10 @@
 @media screen and (max-width: @max-width-lesser){
 	.pagination__item{
 		width: 6%;
-		margin-right: 5%;
+		
+		&:first-child{
+			margin-right: 1.8rem;
+		}
 	}
 
 	.pagination__item_hidden{
