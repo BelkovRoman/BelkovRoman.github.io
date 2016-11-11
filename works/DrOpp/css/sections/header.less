@@ -1,0 +1,68 @@
+/*header*/
+
+.header{
+	z-index: 5;
+	background-image: url(../img/banner.jpg);
+    background-color: #5f5f5f;
+    padding-top: 23rem;
+    padding-bottom: 33rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+	box-shadow: 0 0 0 400px rgba(0, 0, 0, 0.33) inset;
+}
+
+.header__inner{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+
+.logo{
+	text-align: center;
+	display: block;
+	margin-bottom: 60px;
+	font-family: 'BebasNeue Book';
+	font-size: 11rem;
+	color: #fff;
+}
+
+.logo__label{
+	display: block;
+	color: #fff;
+	width: 17rem;
+	font-size: 3.2rem;
+	font-family: 'Oswald-Bold';
+	padding: 1.5rem 5.5rem;
+	background-color: @main-color;
+	border-radius: 5px;
+	transition: all 0.4s ease-in 0s;
+	
+	&:hover{
+		background-color: @submain-color;
+	}
+}
+	
+@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+	.header{
+		padding-top: 15rem;
+		padding-bottom: 15rem;
+	}
+	
+	.logo{
+		font-size: 8rem;
+	}
+}
+
+@media screen and (max-width: @max-width-lesser){	
+	.header{
+		padding-top: 15rem;
+		padding-bottom: 15rem;
+	}
+	
+	.logo{
+		font-size: 8rem;
+	}
+}

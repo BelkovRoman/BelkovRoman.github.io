@@ -1,0 +1,206 @@
+/*about*/
+
+.avatars{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 6rem;
+	padding-top: 6rem;
+}
+
+.avatar{
+	position: relative;
+	display: block;
+	width: 20%;
+	
+	&:after{
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(255, 255, 255, 0);
+		transition: background 0.2s ease-out;
+	}
+	
+	&:hover:after{
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+}
+
+.about__inner{
+	background-color: @main-color;
+}
+
+.about__group{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	color: #fff;
+	
+	&:after{
+		position: absolute;
+		content: "";
+		border-width: 20px 20px 15px 20px;
+		border-style: solid;
+		border-color: transparent;
+		border-top-width: 40px;
+		border-top-color: #fFF;
+		top: -2px;
+		left: 35%;
+	}
+}
+
+.about__column{
+	display: inline-block;
+	width: 45%;
+}
+
+.about__title{
+	margin-bottom: 3rem;
+	font-size: 2.2rem;
+	font-family: 'Oswald-Bold';
+}
+
+.about__article{
+	margin-bottom: 4.5rem;
+	font-size: 1.6rem;
+}
+
+.social__link{
+	position: relative;
+	display: inline-block;
+	margin-right: 2rem;
+	
+	&:last-child{
+		margin-right: 0px;
+	}
+	
+	&:after{
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(255, 255, 255, 0);
+		transition: background 0.2s ease-out;
+	}
+	
+	&:hover:after{
+		background-color: rgba(144,144,144,0.4);
+	}
+}
+
+.skills__item{
+	margin-bottom: 2rem;
+	font-size: 1.6rem;
+	
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+.skills__name{
+	display: inline-block;
+	width: 22%;
+	margin-right: 10%;
+}
+
+.skills__level{
+	float: right;
+}
+
+.skill{
+	display: inline-block;
+	margin-right: 4%;
+    height: 1rem;
+    width: 52%;
+}
+
+.skill__inner{
+	height: 100%;
+	background-color: #fff;
+}
+
+.skill__inner_PHOTOSHOP{
+	width: 100%;
+}
+
+.skill__inner_ILLUSTRATOR{
+	width: 98%;
+}
+
+.skill__inner_WORDPRESS{
+	width: 67%;
+}
+
+.skill__inner_JOOMLA{
+	width: 70%;
+}
+
+.skill__inner_JQUERY{
+	width: 58%;
+}
+
+@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+	.about__column{
+		width: 100%;
+		margin-bottom: 8%;
+		
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	
+	.about__group{
+		flex-direction: column;
+		padding-top: 6rem;
+	}
+	
+	.about__title{
+		margin-bottom: 0rem;
+	}
+	
+	.column__title{
+		margin-bottom: 2.5rem;
+	}
+	
+	.about__article{
+		margin-bottom: 1.5rem;
+	}
+}
+
+@media screen and (max-width: @max-width-lesser){	
+	.about__column{
+		width: 100%;
+		margin-bottom: 8%;
+		
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	
+	.about__group{
+		flex-direction: column;
+		padding-top: 6rem;
+	}
+	
+	.about__title{
+		margin-bottom: 0rem;
+	}
+	
+	.column__title{
+		margin-bottom: 2.5rem;
+	}
+	
+	.about__article{
+		margin-bottom: 1.5rem;
+	}
+}
