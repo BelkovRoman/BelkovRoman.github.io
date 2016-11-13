@@ -23,141 +23,15 @@
 	margin-right: 1rem;
 }
 
-.hamburger{
-	float: right;
-	display: none;
-	width: 55px;
-    height: 45px;
-}
-
-.hamburger__trigger {
-	position: absolute;
-	z-index: 25;
-	display: inline-block;
-	width: 33px;
-	height: 5px;
-	border-top: 3px solid #0091be;
-	border-bottom: 3px solid #0091be;
-	text-indent: -9999px;
-	cursor: pointer;
-	margin-left: 1rem;
-	margin-top: 1.5rem;
-	transition: transform 0.4s;
-	
-	&:before{
-		content: '';
-		width: 100%;
-		position: absolute;
-		height: 3px;
-		background-color: #0091be;
-		left: 0px;
-		top: 14px;
-	}
-}
- 
- .hamburger__trigger:after {
-	display: none;
- }
- 
-.hamburger__toggle {
-	display: none;
-	
-	&:checked ~ .hamburger__trigger {
-		border-bottom: none;
-		border-top: 4px solid #fff;
-		transform: rotate(-225deg);
-	}
-	
-	&:checked ~ .hamburger__trigger:after {
-		position: absolute;
-		left: -3px;
-		top: -7px;
-		content: '';
-		z-index: 25;
-		display: inline-block;
-		width: 35px;
-		height: 6px;
-		border-bottom: 4px solid #fff;
-		-webkit-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		transform: rotate(-85deg);
-	}
-	
-	&:checked ~ .hamburger__trigger:before{
-		display: none;
-	}
-	
-	&:checked ~ .hamburger__target {
-		position: absolute;
-		overflow: hidden;
-		clip: auto;
-		margin: auto;
-		width: 100%;
-		height: 100vh;
-		opacity: 0.85;
-		top: 0px;
-		left: 0px;
-	}
-	
-	&:checked ~ .hamburger__trigger {
-		position: absolute;
-	}
-}
-
-.hamburger__target{
-	z-index: 20;
-	border: 0;
-	background-color: #000;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 1px;
-	opacity: 0;
-	transition: 0.5s opacity;
-	text-align: center;
-	list-style: none;
-}
-
-.hamburger__item{
-	width: 80%;
-}
-
-.hamburger__link{
-	opacity: 1;
-	font-size: 1.7rem;
-	text-indent: 0px;
-	color: #fff;
-	display: block;
-	transition: 0.5s all;
-	padding-top: 1rem;
-    padding-bottom: 1rem;
-	
-	&:hover{
-		color: #000;
-		background: #fff;
-	}
-}
-
 @media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
 	.top-panel{
 		padding-top: 1rem;
-		padding-bottom: 0;
+		padding-bottom: 1rem;
 		position: fixed;
 		width: 100%;
 		background-color: #fff;
 		top: 0px;
 		left: 0px;
-	}
-	
-	.hamburger{
-		display: inline-block;
 	}
 	
 	.navigation{
@@ -172,17 +46,13 @@
 @media screen and (max-width: @max-width-lesser){
 	.top-panel{
 		padding-top: 1rem;
-		padding-bottom: 0;
+		padding-bottom: 1rem;
 		z-index: 10;
 		position: fixed;
 		width: 100%;
 		background-color: #fff;
 		top: 0px;
 		left: 0px;
-	}
-	
-	.hamburger{
-		display: inline-block;
 	}
 	
 	.navigation{
