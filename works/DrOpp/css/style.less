@@ -1,0 +1,116 @@
+/*Страница*/
+
+@main-color: #fd5433;
+@submain-color: #c2432a;
+@addit-color: #474444;
+
+/*Подключаем переменные и миксины*/
+@import "settings";
+
+/*Подключаем компоненты верстки*/
+@import "components/preloader.less";
+@import "components/hamburger.less";
+@import "components/skills.less";
+@import "components/social.less";
+@import "components/members.less";
+
+/*Подключаем каркас верстки*/
+@import "layout/header.less";
+@import "layout/grid.less";
+
+/*Подключаем секции*/
+@import "sections/about.less";
+@import "sections/blog.less";
+@import "sections/contacts.less";
+@import "sections/portfolio.less";
+@import "sections/services.less";
+@import "sections/home.less";
+
+/*Подключаем вспомогательный элемент, убирающий последствия от "float"*/
+@import "helpers/clearfix.less";
+
+
+/*Общее*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+	min-height: 100%;
+	z-index: 10;
+}
+
+body{
+	color: @addit-color;
+	background-color: #fff;
+	font-family: Arial,'Oswald-Bold', 'BebasNeue Book';
+}
+
+a{
+	color: @addit-color;
+	text-decoration: none;
+	transition: color 0.4s ease-in 0s;
+}
+
+img{
+	max-width: 100%;
+    height: auto;
+}
+
+.title_huge{
+	font-size: 3.2rem;
+}
+
+.title_larger{
+	font-size: 3rem;
+}
+
+.title_large{
+	font-size: 2.5rem;
+}
+
+.title_medium{
+	font-size: 2.2rem;
+}
+
+.article{
+	line-height: 1.4;
+}
+
+@media screen and (min-width: @min-width-big){
+	html{
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+	html{
+		font-size: 8px;
+	}
+}
+
+@media screen and (max-width: @max-width-lesser){
+	html{
+		font-size: 7px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

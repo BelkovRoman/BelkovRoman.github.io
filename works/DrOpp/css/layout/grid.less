@@ -1,0 +1,51 @@
+.main-container{
+	margin: 0px auto;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.title_border-top{
+	border-top: 1px solid #828282;
+	border-bottom: none;
+}
+
+.page{
+	overflow: hidden;
+}
+
+.section__title{
+	text-align: center;
+	border-bottom: 1px solid #828282;
+	padding: 35px 0px;
+	font-family: 'Oswald-Bold';
+	color: @main-color;
+}
+
+@media screen and (min-width: @min-width-big){
+	.main-container{
+		min-width: 641px;
+		max-width: 1170px;
+	}
+}
+
+@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+	.main-container{
+		max-width: 640px;
+	}
+	
+	.section__title{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
+
+@media screen and (max-width: @max-width-lesser){
+	.main-container{
+		max-width: 360px;
+	}
+	
+	.section__title{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}

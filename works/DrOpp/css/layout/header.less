@@ -1,0 +1,120 @@
+/*top-panel*/
+
+.header{
+	background-color: #fff;
+}
+
+.header__inner{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo{
+	display: inline-block;
+	font-family: 'BebasNeue Book';
+	font-size: 7rem;
+}
+
+.logo__label{
+	color: @main-color;
+}
+
+.navigation{
+	display: inline-block;
+}
+
+.menu__item{
+	display: inline-block;
+	float: right;
+	padding: 4.5rem 2rem;
+	transition: all 0.4s ease-in 0s;
+	
+	&:hover{
+		background-color: @main-color;
+	}
+	
+	&:hover .menu__link:hover{
+		color: #fff;
+	}
+}
+
+.menu__link{
+	font-family: 'Oswald-Bold';
+	font-size: 1.7rem;
+}
+
+@media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+	.header{
+		position: fixed;
+		width: 100%;
+		z-index: 50;
+		border-bottom: 2px solid #000;
+	}
+	
+	.header__inner{
+		padding: 0.6rem 0;
+	}
+	
+	.navigation{
+		display: none;
+	}
+	
+	.logo{
+		font-size: 4.4rem;
+	}
+	
+	.menu__item{
+		padding: 1.5rem 0;
+		width: 50%;
+	}
+	
+	.menu__link{
+		color: #fff;
+	}
+}
+
+@media screen and (max-width: 740px) and (min-width: 641px){
+	.menu__item{
+		padding: 4rem 1rem;
+	}
+}
+
+@media screen and (max-width: 641px) and (min-width: @min-width-normal){
+	
+	.menu__item{
+		padding: 1.3rem 8rem;
+	}
+}
+
+@media screen and (max-width: @max-width-lesser){
+	.header{
+		position: fixed;
+		width: 100%;
+		z-index: 50;
+		border-bottom: 2px solid #000;
+	}
+	
+	.header__inner{
+		padding: 0.6rem 0;
+	}
+	
+	.navigation{
+		display: none;
+	}
+	
+	.logo{
+		font-size: 4.7rem;
+	}
+	
+	.menu__item{
+		padding: 4rem 0;
+		width: 100%;
+	}
+	
+	.menu__link{
+		font-size: 2.7rem;
+		color: #fff;
+	}
+}
