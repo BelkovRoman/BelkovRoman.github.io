@@ -48,7 +48,7 @@ a:active{
 }
 
 .main-container{
-	width: 60%;
+	width: 75%;
 	margin: 0px auto;
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -63,13 +63,39 @@ a:active{
 }
 
 .section-title{
-	color: #591300;
+	color: #D42E00;
 	margin-bottom: 20px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #C4C4C4;
 	text-align: center;
 
 	font-size: 25px;
+}
+
+/*Прелоадер*/
+.preloader-background{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #000;
+    width: 100%;
+    height: 100vh;
+	z-index: 70;
+}
+
+.preloader__title{
+	color: #000;
+	margin-top: 10px;
+	font-size: 1.5rem;
+	text-align: center;
+	animation: flicker 3s infinite ease;
+}
+
+.dragon-video{
+	max-width: 100%;
+    height: auto;
 }
 
 /*Страница*/
@@ -123,7 +149,7 @@ a:active{
 }
 
 .avatar__label{
-	color: #591300;
+	color: #D42E00;
 	font-size: 16px;
 }
 
@@ -269,10 +295,19 @@ a:active{
 	body{
 		background: url(../img/background.jpg) fixed rgba(0,0,0,0);
 		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+	
+	.animated{
+		animation-delay: 5.2s;
 	}
 }
 
 @media screen and (max-width: @max-width-normal) and (min-width: @min-width-normal){
+	.preloader-background{
+		display: none;
+	}
+	
 	.main-container{
 		width: 90%;
 	}
@@ -289,6 +324,10 @@ a:active{
 @media screen and (max-width: @max-width-lesser){	
 	.main-container{
 		width: 95%;
+	}
+
+	.preloader-background{
+		display: none;
 	}
 	
 	.header__inner{
