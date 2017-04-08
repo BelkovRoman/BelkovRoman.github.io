@@ -6,83 +6,99 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/preloader.js"></script>
 </head>
-<body>
-	<div class="main-container clearfix">
-		<div class="column animated">
-			<header class="header">
-				<div class="header__inner animated">
-					<div class="avatar-container">
-						<img class="avatar__image" src="img/avatar.png" alt="Аватар"/>
-					</div>
-					<div class="avatar__name">
-						Роман Меч
-						<p class="avatar__label">HTML-верстальщик</p>
-					</div>
-				</div>
-			</header>
-			<div class="column__content">
-				<section class="section about">
-					<h2 class="title section-title about__title animated">Обо мне:</h2>
-					<article class="article portfolio__article animated">
-						<p class="article__paragraph">
-							Привет. На данный момент мне 20 лет. Учусь в университете и уделяю много времени любимому занятию - верстке сайтов.
-						</p>
-						<p class="article__paragraph">
-							Начал знакомство с front-end разработкой с осени 2014 года, сделал перерыв, а потом продолжил обучение летом 2016 года. 
-							Занимаюсь версткой до сих пор и намерен не останавливаться в развитии. 
-						</p>
-						<p class="article__paragraph">
-							Страраюсь создавать оптимизированные и стильные сайты. 
-						</p>
-					</article>
-				</section>
-				<section class="section portfolio">
-					<h2 class="title section-title portfolio__title animated">Мои работы:</h2>
-					<ul class="menu__list portfolio__list animated">
-						<li class="menu__item">	
-							<a href="works\7-pap\index.html" class="menu__link">Cтраница "7-Pap" <span class="menu__link_comment">(десктопная)</span></a>
-						</li>
-						<li class="menu__item">	
-							<a href="works\Sigma\index.html" class="menu__link">Страница интернет-магазина "Sigma" <span class="menu__link_comment">(адаптивная)</span></a>
-						</li>
-						<li class="menu__item">
-							<a href="works\Responsive UX\index.html" class="menu__link">Cтраница "Responsive UX" <span class="menu__link_comment">(адаптивная)</span></a>
-						</li>
-						<li class="menu__item">
-							<a href="works\DrOpp\index.html" class="menu__link">Cтраница "DroPP" <span class="menu__link_comment">(адаптивная)</a>
-						</li>
-						<li class="menu__item">
-							<a href="works\Preloader. Deus Ex HR\index.html" class="menu__link">Прелоадер. Deus Ex: HR</a>
-						</li>
-						<li class="menu__item">
-							<a href="works\my-page-dmc\index.html" class="menu__link">Эта страница, стилизованная под Dmc: Devil may cry</a>
-						</li>
-						<li class="menu__item">
-							<a href="works\my-page-dao\index.html" class="menu__link">Эта страница, стилизованная под Dragon age: Origins</a>
-						</li>
-					</ul>
-				</section>
-				<section class="section contacts">
-					<h2 class="title section-title contacts__title animated">Контакты:</h2>
-					<ul class="menu__list contacts__list animated">
-						<li class="menu__item">
-							<a href="https://vk.com/roman_sword" class="menu__link">Страница Вконтакте</a>
-						</li>
-						<li class="menu__item">
-							<a href="https://twitter.com/" class="menu__link">Страница Twitter</a>
-						</li>
-						<li class="menu__item">	
-							<a href="https://github.com/BelkovRoman" class="menu__link">Профиль Github</a>
-						</li>
-						<li class="menu__item">	
-							<a href="http://codepen.io/RomanBelkov" class="menu__link">Профиль CodePen</a>
-						</li>
-					</ul>
-				</section>
-			</div>
-		</div>
-	</div>
-	<script src="js/script.js"></script>
+<body class='clearfix'>
+    <div class='page'>
+        <div class="main-container">
+            <div class="columns">
+                <div class="column">
+                    <section class="section name">
+                        <img class="image name__image" src="img/avatar.png"/>
+                        <h2 class="title name__title">
+                            Белков Роман
+                            <span class="name__subtitle">Front-end разработчик</span>
+                        </h2>
+                    </section>
+                    <section class="section bio">
+                        <h2 class="title section__title">Биография</h2>
+                        <article class='article'>
+                            С миром веб-разработки мое знакомство началось с основ. Услышал о <a href="https://vk.com/mkhtmlverstka">курсах по html и css</a> и заинтересовался. Моим первым наставником оказался
+                            <a href="https://stas-melnikov.ru/">Стас Мельников</a>.<br/>
+                            С лета 2014 года по январь 2015 обучался верстке.<br/>
+                            В конце июня 2016 года я вновь услышал о курсах и понял, что хочу попробовать еще раз.<br/>
+                            Три месяца - обучение основам.<br/>
+                            Еще два месяца - продвинутое обучение.<br/>
+                            С конца декабря 2016 года по 30 марта 2017 года проходил стажировку в ООО "Smartway" как junior front-end разработчик.<br/>
+                            На данный момент сдаю лабы и пишу диплом.
+                        </article>
+                    </section>
+                </div>
+                <div class="column">
+                    <section class="section portfolio">
+                        <h2 class='title portfolio__title'>Портфолио</h2>
+                        <div class="portfolio__inner">
+                            <h3 class='title title_small portfolio__title_small'>Учебные макеты</h2>
+                            <ul class="layouts__list">
+                                <li class="layouts__item"><a class="layouts__link" href="works\7-pap\index.html">7пап</a></li>
+                                <li class="layouts__item"><a class="layouts__link" href="works\Sigma\index.html">Sigma</a></li>
+                                <li class="layouts__item"><a class="layouts__link" href="works\Responsive UX\index.html">Responsive UX</a></li>
+                                <li class="layouts__item"><a class="layouts__link" href="works\DrOpp\index.html">Dropp</a></li>
+                            </ul>
+                        </div>
+                        <div class="portfolio__inner">
+                            <h3 class='title title_small portfolio__title_small'>Баловство</h2>
+                            <ul class="portfolio__list">
+                                <li class="portfolio__item"><a href="works\my-page-dmc\index.html">Страница, стилизованная под DMC</a></li>
+                                <li class="portfolio__item"><a href="works\my-page-dao\index.html">Страница, стилизованная под Dragon Age</a></li>
+                            </ul>
+                        </div>
+                        <div class="portfolio__inner">
+                            <h3 class='title title_small portfolio__title_small'>Компоненты на ReactJS</h2>
+                            <ul class="portfolio__list">
+                                <li class="portfolio__item"><a href="https://github.com/BelkovRoman/reactJS-Components">Репозиторий с компонентами</a></li>
+                            </ul>
+                        </div>
+                         <div class="portfolio__inner">
+                            <h3 class='title title_small portfolio__title_small'>Игра на PhaserJS</h2>
+                            <ul class="portfolio__list">
+                                <li class="portfolio__item"><a href="works\princeOfPersia2D\index.html">Prince of Persia 2D platformer (Beta)</a></li>
+                            </ul>
+                        </div>
+                        <div class="portfolio__inner">
+                            <h3 class='title title_small portfolio__title_small'>Стак технологий</h2>
+                            <ul class="technologies__list">
+                                <li class="technologies__item">HTML</li>
+                                <li class="technologies__item">CSS</li>
+                                <li class="technologies__item">JavaScript</li>
+                                <li class="technologies__item">ReactJS</li>
+                                <li class="technologies__item">PhaserJS</li>
+                                <li class="technologies__item">NPM</li>
+                                <li class="technologies__item">Git</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <section class="section contacts">
+                <h2 class='title portfolio__title'>Контакты</h2>
+                <ul class="contacts__list">
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="https://vk.com/roman_sword"><img src="img/vk.png"/></a>
+                    </li>
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="https://github.com/BelkovRoman"><img src="img/github.png"/></a>
+                    </li>
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="http://codepen.io/RomanBelkov/"><img src="img/codepen.png"/></a>
+                    </li>
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="https://penza.hh.ru/resume/ee8af74eff036e25660039ed1f746e62675841"><img src="img/hh.jpg"/></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
 </body>
 </html>
