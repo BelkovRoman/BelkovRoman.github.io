@@ -11,92 +11,73 @@
 </head>
 <body class='clearfix'>
     <div class='page'>
-        <div class="main-container">
-            <div class="columns">
-                <div class="column">
-                    <section class="section name">
-                        <img class="image name__image" src="img/avatar.png"/>
-                        <h2 class="title name__title">
-                            Белков Роман
-                            <span class="name__subtitle">Front-end разработчик</span>
-                        </h2>
-                    </section>
-                    <section class="section bio">
-                        <h2 class="title section__title">Биография</h2>
-                        <article class='article'>
-                            С миром веб-разработки мое знакомство началось с основ. Услышал о <a href="https://vk.com/mkhtmlverstka">курсах по html и css</a> и заинтересовался. Моим первым наставником оказался
-                            <a href="https://stas-melnikov.ru/">Стас Мельников</a>.<br/>
-                            С лета 2014 года по январь 2015 обучался верстке.<br/>
-                            В конце июня 2016 года я вновь услышал о курсах и понял, что хочу попробовать еще раз.<br/>
-                            Три месяца - обучение основам.<br/>
-                            Еще два месяца - продвинутое обучение.<br/>
-                            С конца декабря 2016 года по 30 марта 2017 года проходил стажировку в ООО "Smartway" как junior front-end разработчик.<br/>
-                        </article>
-                    </section>
-                </div>
-                <div class="column">
-                    <section class="section portfolio">
-                        <h2 class='title portfolio__title'>Портфолио</h2>
-                        <div class="portfolio__inner">
-                            <h3 class='title title_small portfolio__title_small'>Макеты</h2>
-                            <ul class="layouts__list">
-                                <li class="layouts__item">
-                                    <a class="layouts__link" href="works\7-pap\index.html">
-                                        <img class="image" src="img/7pap.png" alt="7пап"/>
-                                    </a>
-                                </li>
-                                <li class="layouts__item">
-                                    <a class="layouts__link" href="works\Sigma\index.html">
-                                        <img class="image " src="img/sigma.png" alt="Sigma"/>
-                                    </a>
-                                </li>
-                                <li class="layouts__item">
-                                    <a class="layouts__link" href="works\Responsive UX\index.html">
-                                        <img class="image " src="img/responsive.png" alt="Responsive UX"/>
-                                    </a>
-                                </li>
-                                <li class="layouts__item">
-                                    <a class="layouts__link" href="works\DrOpp\index.html">
-                                        <img class="image " src="img/dropp.png" alt="Dropp"/>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="portfolio__inner">
-                            <h3 class='title title_small portfolio__title_small'>Баловство</h2>
-                            <ul class="portfolio__list">
-                                <li class="portfolio__item"><a href="works\my-page-dmc\index.html">Страница, стилизованная под DMC</a></li>
-                                <li class="portfolio__item"><a href="works\my-page-dao\index.html">Страница, стилизованная под Dragon Age</a></li>
-                            </ul>
-                        </div>
-                        <div class="portfolio__inner">
-                            <h3 class='title title_small portfolio__title_small'>Компоненты на ReactJS</h2>
-                            <ul class="portfolio__list">
-                                <li class="portfolio__item"><a href="https://github.com/BelkovRoman/reactJS-Components">Репозиторий с компонентами</a></li>
-                            </ul>
-                        </div>
-                         <div class="portfolio__inner">
-                            <h3 class='title title_small portfolio__title_small'>Игра на PhaserJS</h2>
-                            <ul class="portfolio__list">
-                                <li class="portfolio__item"><a href="works\princeOfPersia2D\index.html">Prince of Persia 2D platformer (Beta)</a></li>
-                            </ul>
-                        </div>
-                        <div class="portfolio__inner">
-                            <h3 class='title title_small portfolio__title_small'>Стек технологий</h2>
-                            <ul class="technologies__list">
-                                <li class="technologies__item">HTML</li>
-                                <li class="technologies__item">CSS</li>
-                                <li class="technologies__item">JavaScript</li>
-                                <li class="technologies__item">ReactJS</li>
-                                <li class="technologies__item">PhaserJS</li>
-                                <li class="technologies__item">NPM</li>
-                                <li class="technologies__item">Git</li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
+        <header class="header">
+            <div class="header__inner">
+                <img class="image name__image" src="img/avatar.png"/>
+                <h2 class="title name__title">
+                    Белков Роман
+                    <span class="name__subtitle">Front-end разработчик</span>
+                </h2>
             </div>
-            <section class="section contacts">
+        </header>
+        <div class="main-container">
+            <section class="section bio">
+                <h2 class="title section__title">Биография</h2>
+                <article class='article'>
+                    С миром веб-разработки мое знакомство началось с основ. Услышал о <a href="https://vk.com/mkhtmlverstka">курсах по html и css</a> и заинтересовался.<br/>
+                    С лета 2014 года по январь 2015 обучался верстке.<br/>
+                    В конце июня 2016 года я вновь услышал о курсах и понял, что хочу попробовать еще раз.<br/>
+                    Три месяца - обучение основам.<br/>
+                    Еще два месяца - продвинутое обучение.<br/>
+                    С конца декабря 2016 года по 30 марта 2017 года проходил стажировку в ООО "Smartway" как junior front-end разработчик.<br/>
+                </article>
+            </section>
+            <section class="section">
+                <h2 class='title portfolio__title'>Макеты</h2>
+                <ul class="layouts__list">
+                    <li class="layouts__item">
+                        <a class="layouts__link" href="works\7-pap\index.html">
+                            <img class="image" src="img/7pap.png" alt="7пап"/>
+                        </a>
+                    </li>
+                    <li class="layouts__item">
+                        <a class="layouts__link" href="works\Sigma\index.html">
+                            <img class="image " src="img/sigma.png" alt="Sigma"/>
+                        </a>
+                    </li>
+                    <li class="layouts__item">
+                        <a class="layouts__link" href="works\Responsive UX\index.html">
+                            <img class="image " src="img/responsive.png" alt="Responsive UX"/>
+                        </a>
+                    </li>
+                    <li class="layouts__item">
+                        <a class="layouts__link" href="works\DrOpp\index.html">
+                            <img class="image " src="img/dropp.png" alt="Dropp"/>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="section">
+                <h2 class='title portfolio__title'>Фреймворки</h2>
+                <ul class="portfolio__list">
+                    <li class="portfolio__item"><a href="https://github.com/BelkovRoman/reactJS-Components">Репозиторий с ReactJS компонентами</a></li>
+                    <li class="portfolio__item"><a href="works\princeOfPersia2D\index.html">Игра на PhaserJS</a></li>
+                    </ul>
+            </section>
+            <section class="section">
+                <h2 class='title portfolio__title'>Стек технологий</h2>
+                <ul class="technologies__list">
+                        <li class="technologies__item">HTML</li>
+                        <li class="technologies__item">CSS</li>
+                        <li class="technologies__item">JavaScript</li>
+                        <li class="technologies__item">ReactJS</li>
+                        <li class="technologies__item">PhaserJS</li>
+                        <li class="technologies__item">NPM</li>
+                        <li class="technologies__item">Git</li>
+                    </ul>
+            </section>
+        </div>
+        <footer class="footer">
                 <h2 class='title portfolio__title'>Контакты</h2>
                 <ul class="contacts__list">
                     <li class="contacts__item">
@@ -112,8 +93,7 @@
                         <a class="contacts__link" href="https://penza.hh.ru/resume/ee8af74eff036e25660039ed1f746e62675841"><img src="img/hh.jpg"/></a>
                     </li>
                 </ul>
-            </section>
-        </div>
+            </footer>
     </div>
 </body>
 </html>
