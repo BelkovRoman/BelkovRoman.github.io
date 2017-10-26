@@ -1,6 +1,6 @@
-prepros.cfg
 .gitignore
 .gitattributes
+prepros-6.config
 
 # Windows image file caches
 Thumbs.db
